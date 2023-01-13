@@ -5,7 +5,7 @@ import React, { useState } from "react";
  *
  * When the form is submitted, a new post is created and the form contents cleared.
  */
-function PostCreate() {
+function PostCreate({posts, setPosts}) {
   const initialFormState = {
     type: "Text",
     content: "",
@@ -20,6 +20,8 @@ function PostCreate() {
   // TODO: When the form is submitted, a new post should be created, and the form contents cleared.
   const handleSubmit = (event) => {
     event.preventDefault();
+setPosts([...posts, ])
+//  posts;
     setFormState({ ...initialFormState });
   };
   // For the tests to pass, the form below must have:
