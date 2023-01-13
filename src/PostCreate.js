@@ -5,13 +5,13 @@ import React, { useState } from "react";
  *
  * When the form is submitted, a new post is created and the form contents cleared.
  */
-function PostCreate({posts, setPosts}) {
+function PostCreate({ posts, setPosts }) {
   const initialFormState = {
     type: "Text",
     content: "",
   };
   const [formState, setFormState] = useState({ ...initialFormState });
-  const handleChange = ({target}) => {
+  const handleChange = ({ target }) => {
     // console.log(formState, target.name, target.value);
     // console.log(formState);
     // console.log(event);
@@ -20,8 +20,7 @@ function PostCreate({posts, setPosts}) {
   // TODO: When the form is submitted, a new post should be created, and the form contents cleared.
   const handleSubmit = (event) => {
     event.preventDefault();
-setPosts([...posts, ])
-//  posts;
+    setPosts([...posts, formState]);
     setFormState({ ...initialFormState });
   };
   // For the tests to pass, the form below must have:
