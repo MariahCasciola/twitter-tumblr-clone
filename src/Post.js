@@ -1,7 +1,14 @@
 import React from "react";
 
-function Post({ post }) {
-  console.log(post);
+function Post({ post, posts, setPosts }) {
+  //   console.log(post);
+  const deleteHandler = () => {
+    const filteredPosts = posts.filter((currentPost) => {
+      return post !== currentPost;
+    });
+    setPosts(filteredPosts);
+  };
+
   return (
     <div className="post">
       {post.type === "Text" ? (
@@ -9,7 +16,9 @@ function Post({ post }) {
       ) : (
         <img src={post.content} alt="" />
       )}
-      <button type="delete">Delete</button>
+      <button type="button" onClick={deleteHandler}>
+        Delete
+      </button>
     </div>
   );
 }

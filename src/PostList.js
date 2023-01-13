@@ -13,7 +13,7 @@ function PostList({ posts, setPosts }) {
   return (
     <div className="post-list">
       {posts.map((post, index) => {
-        return <Post post={post} key={index} />;
+        return <Post post={post} posts={posts} setPosts={setPosts} key={index} />;
       })}
     </div>
   );
