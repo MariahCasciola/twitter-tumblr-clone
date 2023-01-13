@@ -12,7 +12,7 @@ function App() {
   return (
     <div className="App">
       <PostCreate />
-      <PostList />
+      <PostList posts={posts} setPosts={setPosts}/>
     </div>
   );
 }
