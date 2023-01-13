@@ -16,7 +16,7 @@ function Post({ post, posts, setPosts }) {
       ) : (
         <img src={post.content} alt="" />
       )}
-      <button type="button" onClick={deleteHandler}>
+      <button type="button" name="delete" onClick={deleteHandler}>
         Delete
       </button>
     </div>
